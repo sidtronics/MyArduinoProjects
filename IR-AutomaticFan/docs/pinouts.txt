@@ -1,0 +1,14 @@
+ET6202 pinouts:
+
+1 :- data
+2 :- clk
+3 :- stb
+4 :- gnd
+5 :- vcc
+6 :- IR
+
+**pinouts start from left
+
+More information:
+
+mode = 0

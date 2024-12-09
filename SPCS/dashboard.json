@@ -1,0 +1,241 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "name",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "switch_plugin",
+					"settings": {
+						"title": "Device",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"state\"]",
+						"urlOn": "http://esp8266.local/control?name=bulb&state=ON",
+						"urlOff": "http://esp8266.local/control?name=bulb&state=OFF",
+						"on_text": "On",
+						"off_text": "Off"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "rating",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"power_rating\"]",
+						"animate": true,
+						"units": "W"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "time",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"used_time\"] / 1000",
+						"animate": true,
+						"units": "s"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "usage",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"units_consumed\"]",
+						"animate": true,
+						"units": "KWh"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "cost",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][0][\"cost\"]",
+						"animate": true,
+						"units": "Rs"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Cost/Unit",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"unit_cost\"]",
+						"animate": true,
+						"units": "Rs"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Total Usage",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"total_consumption\"]",
+						"sparkline": false,
+						"animate": true,
+						"units": "KWh"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"value": [
+							"datasources[\"ESP8266\"][\"total_consumption\"]"
+						]
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Estimated Bill",
+						"size": "big",
+						"value": "datasources[\"ESP8266\"][\"total_cost\"]",
+						"animate": true,
+						"units": "Rs"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "name",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"name\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "switch_plugin",
+					"settings": {
+						"title": "Device",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"state\"]",
+						"urlOn": "http://esp8266.local/control?name=fan&state=ON",
+						"urlOff": "http://esp8266.local/control?name=fan&state=OFF",
+						"on_text": "On",
+						"off_text": "Off"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "rating",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"power_rating\"]",
+						"animate": true,
+						"units": "W"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "time",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"used_time\"] / 1000",
+						"animate": true,
+						"units": "s"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "usage",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"units_consumed\"]",
+						"animate": true,
+						"units": "KWh"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "cost",
+						"size": "regular",
+						"value": "datasources[\"ESP8266\"][\"devices\"][1][\"cost\"]",
+						"animate": true,
+						"units": "Rs"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 15
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "highcharts-timeseries",
+					"settings": {
+						"timeframe": 60,
+						"blocks": 4,
+						"chartType": "spline",
+						"xaxis": "{\"title\":{\"text\" : \"Time\"}, \"type\": \"datetime\", \"floor\":0}",
+						"yaxis": "{\"title\":{\"text\" : \"Values\"}, \"minorTickInterval\":\"auto\", \"floor\":0}",
+						"series1": "datasources[\"ESP8266\"][\"devices\"][0][\"units_consumed\"]",
+						"series1label": "bulb",
+						"series2": "datasources[\"ESP8266\"][\"devices\"][1][\"units_consumed\"]",
+						"series2label": "fan"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "ESP8266",
+			"type": "JSON",
+			"settings": {
+				"url": "http://esp8266.local/data",
+				"use_thingproxy": false,
+				"refresh": 5,
+				"method": "GET"
+			}
+		}
+	],
+	"columns": 3
+}
