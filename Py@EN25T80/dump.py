@@ -14,9 +14,9 @@ for i in range(0, 8192):
 
 flash.stb(True)
 
-# Sry was too lazy to implement such trivial code myself..
-# GPT:
+# Sry was too lazy to implement following trivial code myself..
 
+# GPT:
 # Convert each number to its hex representation
 hex_numbers = [format(number, "02x") for number in numbers]
 
