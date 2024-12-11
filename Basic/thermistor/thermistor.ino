@@ -14,7 +14,7 @@ void loop() {
   double R2 = R1 * (1023.0/Vo - 1.0);  //Resistance of Thermistor
   double logR2 = log(R2);
   double T = (1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2)); //Steinhart-Hart equation
-  T = T - 273.15; //Kelvin to Celcius conversion
+  T = T - 273.15; //Kelvin to Celsius conversion
 
   Serial.print("Temperature: "); 
   Serial.print(T);
