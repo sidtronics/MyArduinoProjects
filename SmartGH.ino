@@ -22,7 +22,7 @@ void setup() {
   Serial.begin(9600);
   delay(1500); 
 
-  analogSetAttenuation(ADC_ATTENDB_MAX);
+  analogSetPinAttenuation(35, ADC_ATTENDB_MAX);
 
   initProperties();
 
