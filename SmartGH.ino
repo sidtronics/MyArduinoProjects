@@ -22,6 +22,8 @@ void setup() {
   Serial.begin(9600);
   delay(1500); 
 
+  analogSetAttenuation(ADC_ATTENDB_MAX);
+
   initProperties();
 
   ArduinoCloud.begin(ArduinoIoTPreferredConnection);
