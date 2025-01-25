@@ -6,8 +6,8 @@
 #include "SoilSensor.h"
 
 DHTSensor dht(13, temperature, humidity);
-LDRSensor ldr(14, light);
-SoilSensor soil(15, moisture);
+LDRSensor ldr(35, light);
+SoilSensor soil(34, moisture);
 
 unsigned long previousTime = 0;
 
