@@ -1,5 +1,4 @@
 #include "SoilSensor.h"
-#include <Arduino.h>
 
 SoilSensor::SoilSensor(uint8_t sensorPin, float& moisture) : Sensor(sensorPin), _moisture(moisture) {
 

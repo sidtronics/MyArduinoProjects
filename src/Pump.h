@@ -1,5 +1,5 @@
 #pragma once
-#include <stdint.h>
+#include <Arduino.h>
 
 #define PUMP_ON 1
 #define PUMP_OFF 0

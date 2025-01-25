@@ -1,5 +1,4 @@
 #include "DHTSensor.h"
-#include <Arduino.h>
 
 DHTSensor::DHTSensor(uint8_t sensorPin, float &temperature, float &humidity)
     : Sensor(sensorPin), _dht(sensorPin, DHT11), _temperature(temperature),

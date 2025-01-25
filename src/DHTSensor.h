@@ -1,6 +1,6 @@
 #pragma once
-#include "Sensor.h"
 #include <DHT.h>
+#include "Sensor.h"
 
 #define DHTTEMP 0
 #define DHTHUMID 1

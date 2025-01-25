@@ -1,5 +1,5 @@
 #pragma once
-#include <stdint.h>
+#include <Arduino.h>
 
 class Sensor {
 public:

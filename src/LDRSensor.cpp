@@ -1,5 +1,4 @@
 #include "LDRSensor.h"
-#include <Arduino.h>
 
 LDRSensor::LDRSensor(uint8_t sensorPin, float& light) : Sensor(sensorPin), _light(light) {
 
