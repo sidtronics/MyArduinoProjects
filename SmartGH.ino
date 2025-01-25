@@ -5,9 +5,9 @@
 #include "LDRSensor.h"
 #include "SoilSensor.h"
 
-DHTSensor dht(13, cloud::temperature, cloud::humidity);
-LDRSensor ldr(14, cloud::light);
-SoilSensor soil(15, cloud::moisture);
+DHTSensor dht(13, temperature, humidity);
+LDRSensor ldr(14, light);
+SoilSensor soil(15, moisture);
 
 unsigned long previousTime = 0;
 
@@ -38,6 +38,6 @@ void loop() {
   ArduinoCloud.update();
 }
 
-void cloud::onPumpChange()  {
+void onPumpChange()  {
 }
 
