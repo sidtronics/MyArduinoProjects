@@ -1,7 +1,7 @@
 #include <ArduinoIoTCloud.h>
 #include <Arduino_ConnectionHandler.h>
 
-const char DEVICE_LOGIN_NAME[] = "236d02aa-4d29-4cb0-958f-1dbf058595f9";
+const char DEVICE_LOGIN_NAME[] = "5746a979-f69e-4702-97ae-f66e3496684a";
 
 const char SSID[] = SECRET_SSID;
 const char PASS[] = SECRET_OPTIONAL_PASS;
