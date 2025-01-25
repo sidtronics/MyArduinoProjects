@@ -13,5 +13,5 @@ void SoilSensor::update() {
 
 float SoilSensor::_preprocess(float analogVal) {
 
-    return map(analogVal, 0, 4095, 0, 100);
+    return map(analogVal, 0, 4095, 100, 0);
 }
