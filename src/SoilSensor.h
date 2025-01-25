@@ -1,5 +1,5 @@
 #pragma once
-#include "sensor.h"
+#include "Sensor.h"
 
 class SoilSensor : public Sensor {
 
