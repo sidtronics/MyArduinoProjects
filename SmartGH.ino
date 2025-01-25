@@ -1,10 +1,10 @@
 #include "secrets.h"
 #include "thingProperties.h"
 
-#include "DHTSensor.h"
-#include "LDRSensor.h"
-#include "SoilSensor.h"
-#include "Pump.h"
+#include "src/DHTSensor.h"
+#include "src/LDRSensor.h"
+#include "src/SoilSensor.h"
+#include "src/Pump.h"
 
 #define MOISTURE_TRIGGER 40
 #define MOISTURE_THRESHOLD 80
