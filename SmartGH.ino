@@ -6,10 +6,10 @@
 #include "src/SoilSensor.h"
 #include "src/Pump.h"
 
-#define MOISTURE_TRIGGER 40
-#define MOISTURE_THRESHOLD 80
+#define MOISTURE_TRIGGER 10
+#define MOISTURE_THRESHOLD 50
 
-DHTSensor dht(13, temperature, humidity);
+DHTSensor dht(23, temperature, humidity);
 LDRSensor ldr(35, light);
 SoilSensor soil(34, moisture);
 Pump pmp(15, pump);
@@ -22,7 +22,7 @@ void setup() {
   Serial.begin(9600);
   delay(1500); 
 
-  analogSetPinAttenuation(35, ADC_ATTENDB_MAX);
+  // analogSetPinAttenuation(35, ADC_ATTENDB_MAX);
 
   initProperties();
 
