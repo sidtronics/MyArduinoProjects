@@ -8,9 +8,11 @@
 
 #define MOISTURE_TRIGGER 10
 #define MOISTURE_THRESHOLD 50
+#define RELAY_PIN 21
 
 DHTSensor dht(23, temperature, humidity);
 LDRSensor ldr(35, light);
+
 SoilSensor soil(34, moisture);
 Pump pmp(15, pump);
 
@@ -21,7 +23,8 @@ void setup() {
 
   Serial.begin(9600);
   delay(1500); 
-
+  pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, HIGH); 
   // analogSetPinAttenuation(35, ADC_ATTENDB_MAX);
 
   initProperties();
@@ -43,11 +46,13 @@ void loop() {
 
     if(soil.get() <= MOISTURE_TRIGGER) {
         pmp.power(PUMP_ON);
+         digitalWrite(RELAY_PIN, HIGH); 
         autoTriggered = true;
     }
 
     if(autoTriggered && soil.get() >= MOISTURE_THRESHOLD) {
         pmp.power(PUMP_OFF);
+         digitalWrite(RELAY_PIN, LOW); 
         autoTriggered = false;
     }
 
