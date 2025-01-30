@@ -7,12 +7,12 @@
 #include "src/Pump.h"
 
 #define MOISTURE_TRIGGER 10
-#define MOISTURE_THRESHOLD 50
+#define MOISTURE_THRESHOLD 40
 
-DHTSensor dht(23, temperature, humidity);
+DHTSensor dht(27, temperature, humidity);
 LDRSensor ldr(35, light);
 SoilSensor soil(34, moisture);
-Pump pmp(15, pump);
+Pump pmp(14, pump);
 
 bool autoTriggered = false;
 unsigned long previousTime = 0;

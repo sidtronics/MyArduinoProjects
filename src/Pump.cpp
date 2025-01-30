@@ -8,7 +8,7 @@ Pump::Pump(uint8_t pin, bool &pump) : _pin(pin), _pump(pump) {
 
 void Pump::power(bool status) {
 
-    digitalWrite(_pin, !status);
+    digitalWrite(_pin, status);
     _pump = status;
 }
 
