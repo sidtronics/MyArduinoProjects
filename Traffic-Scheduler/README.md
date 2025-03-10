@@ -3,7 +3,7 @@ This sketch is proof of concept to calculate waiting time based on traffic on ea
 time duration. Allocated time is proportional to traffic on that respective lane. This technique can vastly reduce any unnecessary 
 waiting time. To reduce complexity only green lights are simulated but it can be easily extended to include other signals. Number
 of vehicles on each lane are sent using serial port. Syntax: 'RXLXUXDX', X represents number of vehicles on that lane \
-Idea by [@abhishekabhang314](https://github.com/abhishekabhang314)
+Idea by [@abhishekabhang314](https://github.com/abhishekabhang314).
 
 ## Requirements:
 1. 4 LEDs preferably green
